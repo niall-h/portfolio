@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "My Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "public": "npm start --prefix public",
+    "dev": "npm run public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niall-h/portfolio-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niall-h/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/niall-h/portfolio-website#readme"
+}

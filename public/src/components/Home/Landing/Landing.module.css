@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(142, 196, 202);
+  position: relative;
+}
+
+.welcome {
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.welcome-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  margin-bottom: 30px;
+  animation: fadeIn linear 3s;
+}
+
+.scroll {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 5px;
+  animation: fadeIn linear 3s;
+}
+
+.scroll-icon {
+  width: 25%;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  animation: fadeIn linear 3s;
+}
+
+.scroll-icon:hover {
+  width: 30%;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
