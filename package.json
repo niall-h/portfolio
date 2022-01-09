@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "public": "npm start --prefix public",
-    "dev": "npm run public"
+    "dev": "npm run public",
+    "deploy": "npm run deploy --prefix public"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/niall-h/portfolio-website",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react-parallax": "^3.3.0"
   }
 }
