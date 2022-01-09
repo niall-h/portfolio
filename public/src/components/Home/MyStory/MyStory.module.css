@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+.story-title-container {
+    height: 220vh;
+    width: 100%;
+    position: relative;
+}
+
+.this-is-my-story {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.spacer {
+    height: 50vh;
+}
+
+.black-background {
+    background-color: rgb(61, 61, 61);
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+}

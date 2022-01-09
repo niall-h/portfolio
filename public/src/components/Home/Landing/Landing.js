@@ -6,7 +6,7 @@ function Landing() {
   return (
     <div className={styles["landing-page"]}>
       <div className={styles.welcome}>
-        <div className={styles["welcome-text"]}>Welcome!</div>
+        <div className={styles["welcome-text"]}>Hey there!</div>
         <img
           src={scrollIcon}
           alt="scroll"

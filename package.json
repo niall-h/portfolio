@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/niall-h/portfolio-website/issues"
   },
-  "homepage": "https://github.com/niall-h/portfolio-website#readme"
+  "homepage": "https://github.com/niall-h/portfolio-website#readme",
+  "dependencies": {
+    "react-parallax": "^3.3.0"
+  }
 }
