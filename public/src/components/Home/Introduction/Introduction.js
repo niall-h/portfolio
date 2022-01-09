@@ -44,7 +44,7 @@ function Introduction() {
                 >
                     Welcome to my portfolio website!<br></br>
                     <br></br>
-                    My name is <b>Nyan Min Htet.</b>
+                    My name is <b>Nyan Min Htet</b>.
                     <br></br>
                     <br></br>
                     I'm a junior at UC San Diego, currently studying Computer

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "public": "npm start --prefix public",
-    "dev": "npm run public"
+    "dev": "npm run public",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/niall-h/portfolio-website/issues"
   },
-  "homepage": "https://github.com/niall-h/portfolio-website#readme",
+  "homepage": "https://github.com/niall-h/portfolio-website",
   "dependencies": {
     "react-parallax": "^3.3.0"
   }
