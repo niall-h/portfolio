@@ -16,7 +16,7 @@ function MyStory() {
                 className={styles["this-is-my-story"]}
                 style={{ "font-size": `${offsetY * 0.05}px` }}
             >
-                This is my Story.
+                This is my story.
             </div>
             <div className={styles.spacer}></div>
             <div className={styles["black-background"]}></div>
