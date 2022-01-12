@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
-import useIntersection from "./components/Helpers/Helpers.js";
 import Landing from "./components/Home/Landing/Landing";
 import Introduction from "./components/Home/Introduction/Introduction";
 import MyStory from "./components/Home/MyStory/MyStory";
