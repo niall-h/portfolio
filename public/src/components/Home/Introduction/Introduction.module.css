@@ -9,26 +9,37 @@
 
 .intro-text {
     position: absolute;
-    bottom: 0%;
-    width: 40vw;
+    bottom: 40%;
+    width: 35vw;
     margin-left: 7%;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
+    line-height: 40px;
 }
 
 .container {
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sun {
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    object-fit: contain;
 }
 
 .clouds {
     height: 100%;
     width: 100%;
     position: absolute;
-    left: 50%;
+    left: 0%;
     object-fit: contain;
 }
 
@@ -36,7 +47,7 @@
     height: 55%;
     width: 55%;
     position: absolute;
-    bottom: 30%;
+    bottom: 20%;
     left: 45%;
     object-fit: contain;
 }
@@ -47,14 +58,5 @@
     position: absolute;
     bottom: 0%;
     left: 15%;
-    object-fit: contain;
-}
-
-.sun {
-    height: 70%;
-    width: 100%;
-    position: absolute;
-    bottom: 10%;
-    left: 25%;
     object-fit: contain;
 }

@@ -1,5 +1,6 @@
 .container {
     position: relative;
+    height: 100vh;
 }
 
 .background {
@@ -7,13 +8,14 @@
     width: 100vw;
     opacity: 0.5;
     position: absolute;
+    bottom: 0%;
 }
 
 .hot-air-balloon-1 {
     height: 70vh;
     width: 100vw;
     position: absolute;
-    left: 180%;
+    right: 40%;
     top: 20%;
     object-fit: contain;
 }
@@ -22,7 +24,7 @@
     height: 50vh;
     width: 100vw;
     position: absolute;
-    left: 80%;
+    right: 20%;
     top: 10%;
     opacity: 0.7;
     object-fit: contain;
@@ -32,7 +34,7 @@
     height: 20vh;
     width: 100vw;
     position: absolute;
-    left: 18%;
+    right: 40%;
     top: 10%;
     opacity: 0.4;
     object-fit: contain;
@@ -44,7 +46,7 @@
     font-weight: 300;
     font-size: 25px;
     line-height: 35px;
-    top: 230%;
+    top: 10rem;
     left: 40%;
     background-color: rgba(255, 255, 255, 0.5);
     text-align: center;

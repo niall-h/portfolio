@@ -20,9 +20,9 @@ function Home() {
     return (
         <div className="homepage">
             <Landing />
-            <Introduction />
-            <MyStory />
-            <Myanmar />
+            <Introduction offsetY={offsetY} />
+            <MyStory offsetY={offsetY} />
+            <Myanmar offsetY={offsetY} />
         </div>
     );
 }

@@ -1,50 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
+import useIntersection from "../../Helpers/useIntersection";
+import findOffsetTop from "../../Helpers/findOffsetTop";
 import styles from "./Myanmar.module.css";
-import { Parallax } from "react-parallax";
 import backgroundImage from "./Myanmar.jpg";
 import hotAirBalloon from "./HotAirBalloon.png";
 
-const Myanmar = () => {
-    const [offsetY, setOffsetY] = useState(0);
+const Myanmar = ({ offsetY }) => {
+    const [offset, setOffset] = useState(0);
+    const targetRef = useRef(null);
+    const inViewport = useIntersection(targetRef, "200px");
 
-    const handleScroll = () => {
-        setOffsetY(window.pageYOffset);
+    const setStyle = (axis, amount) => {
+        return inViewport
+            ? {
+                  transform: `translate${axis}(${
+                      (offsetY - offset) * amount
+                  }px)`,
+              }
+            : { transform: "none" };
     };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    
     return (
-        <div className={styles.container}>
-            <Parallax
-                className={styles.background}
-                bgImage={backgroundImage}
+        <div
+            className={styles.container}
+            ref={targetRef}
+            onLoad={() => setOffset(findOffsetTop(targetRef))}
+        >
+            <img
+                src={backgroundImage}
                 alt="myanmar"
-                strength={700}
-            ></Parallax>
+                className={styles.background}
+                style={setStyle("Y", 0.5)}
+            ></img>
             <img
                 src={hotAirBalloon}
                 alt="hotairballoon"
                 className={styles["hot-air-balloon-3"]}
-                style={{ transform: `translateX(${offsetY * -0.2}px)` }}
+                style={setStyle("X", -0.2)}
             ></img>
             <img
                 src={hotAirBalloon}
                 alt="hotairballoon"
                 className={styles["hot-air-balloon-2"]}
-                style={{ transform: `translateX(${offsetY * -0.6}px)` }}
+                style={setStyle("X", -0.6)}
             ></img>
             <img
                 src={hotAirBalloon}
                 alt="hotairballoon"
                 className={styles["hot-air-balloon-1"]}
-                style={{ transform: `translateX(${offsetY * -1}px)` }}
+                style={setStyle("X", -1)}
             ></img>
             <div
                 className={styles.biography}
-                style={{ transform: `translateY(${offsetY * -0.5}px)` }}
+                style={setStyle("Y", -0.5)}
             >
                 I was born and raised in Myanmar, a country enriched with
                 culture and beauty the world has yet to see.<br></br>
