@@ -1,30 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./index.css";
-import Landing from "./components/Home/Landing/Landing";
-import Introduction from "./components/Home/Introduction/Introduction";
-import MyStory from "./components/Home/MyStory/MyStory";
-import Myanmar from "./components/Home/Myanmar/Myanmar";
+import React from "react";
+import MyStory from "./components/MyStory/MyStory";
 
-function Home() {
-    const [offsetY, setOffsetY] = useState(0);
-
-    const handleScroll = () => {
-        setOffsetY(window.pageYOffset);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    return (
-        <div className="homepage">
-            <Landing />
-            <Introduction offsetY={offsetY} />
-            <MyStory offsetY={offsetY} />
-            <Myanmar offsetY={offsetY} />
-        </div>
-    );
-}
+const Home = () => {
+    return <MyStory />;
+};
 
 export default Home;

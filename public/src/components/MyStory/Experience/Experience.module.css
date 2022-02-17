@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+.container {
+    width: 100vw;
+    position: relative;
+}
+
+.computer-container {
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    margin: 0;
+    top: 0px;
+    width: inherit;
+    height: 180vh;
+    opacity: 1;
+    z-index: 3;
+    object-fit: cover;
+}
+
+.computer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.app-bar-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.app-bar {
+    position: relative;
+    height: 70px;
+    width: 20%;
+    margin: auto;
+    border: none;
+    border-radius: 5%;
+    top: 29%;
+    background-color: lightgray;
+    opacity: 0.9;
+}
+
+.icon {
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    top: 29.5%;
+    z-index: 4;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.icon:hover {
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    top: 29.2%;
+}
+
+.soundcloud {
+    left: 50%;
+}
+.linkedIn {
+    left: 45.5%;
+}
+.github {
+    left: 41%;
+}
+.vscode-icon {
+    left: 56%;
+}
+.divider {
+    position: absolute;
+    border-left: 1px solid black;
+    height: 40px;
+    width: 5px;
+    top: 29.5%;
+    left: 54.5%;
+    z-index: 4;
+}
+
+.vscode {
+    position: relative;
+    width: 70%;
+    top: -175vh;
+    margin-left: 21%;
+}
+
+.spacer {
+    background-image: linear-gradient(rgb(28,28,28),white);
+    position: relative;
+    top: -181vh;
+    height: 40vh;
+    width: inherit;
+}
+
+.screen-content {
+    width: inherit;
+    position: relative;
+    top: -180vh;
+}
