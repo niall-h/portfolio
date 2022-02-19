@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 .container {
-    position: relative;
-    height: 500vh;
-    width: 100vw;
-    background-color: rgb(129, 196, 202);
-    overflow-x: hidden;
+  position: relative;
+  height: 400vh;
+  width: 100vw;
+  background-color: rgb(129, 196, 202);
+  overflow-x: hidden;
 }
 /* 
 .background {
@@ -17,129 +17,139 @@
 } */
 
 .hot-air-balloon-1 {
-    height: 40vh;
-    width: 100vw;
-    position: absolute;
-    right: 10vw;
-    top: 55vh;
-    object-fit: contain;
-    z-index: 3;
+  height: 40vh;
+  width: 100vw;
+  position: absolute;
+  right: 10vw;
+  top: 55vh;
+  object-fit: contain;
+  z-index: 3;
 }
 
 .hot-air-balloon-2 {
-    height: 30vh;
-    width: 100vw;
-    position: absolute;
-    left: 40vw;
-    top: 30vh;
-    object-fit: contain;
-    z-index: 3;
+  height: 30vh;
+  width: 100vw;
+  position: absolute;
+  left: 40vw;
+  top: 30vh;
+  object-fit: contain;
+  z-index: 3;
 }
 
 .hot-air-balloon-3 {
-    height: 10vh;
-    width: 100vw;
-    position: absolute;
-    right: 40vw;
-    top: 20vh;
-    object-fit: contain;
-    z-index: 3;
+  height: 10vh;
+  width: 100vw;
+  position: absolute;
+  right: 40vw;
+  top: 20vh;
+  object-fit: contain;
+  z-index: 3;
 }
 
-.clouds-left{
-    position: absolute;
-    height: 100vh;
-    width: 100vh;
-    top: 10vh;
-    z-index: 0;
+.clouds-left {
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  top: 10vh;
+  z-index: 0;
 }
-.clouds-right{
-    position: absolute;
-    height: 30vh;
-    width: 30vh;
-    top: 50vh;
-    left: 70vw;
-    z-index: 0;
+.clouds-right {
+  position: absolute;
+  height: 30vh;
+  width: 30vh;
+  top: 50vh;
+  left: 70vw;
+  z-index: 0;
 }
 
 .biography-left {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 150%;
-    top: 30vh;
-    text-align: center;
-    width: 70vw;
-    margin: 0;
-    right: -17vw;
-    z-index: 2;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  top: 30vh;
+  text-align: center;
+  width: 70vw;
+  margin: 0;
+  right: -17vw;
+  z-index: 2;
 }
 .biography-up {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 150%;
-    top: 150vh;
-    text-align: center;
-    width: 50vw;
-    margin: auto;
-    z-index: 2;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  top: 150vh;
+  text-align: center;
+  width: 50vw;
+  margin: auto;
+  z-index: 2;
 }
 .biography-right {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 150%;
-    top: 80vh;
-    text-align: center;
-    width: 80vw;
-    margin: 0;
-    right: 60vw;
-    z-index: 2;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  top: 80vh;
+  text-align: center;
+  width: 80vw;
+  margin: 0;
+  right: 60vw;
+  z-index: 2;
 }
 .biography-down {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    line-height: 150%;
-    top: -50vh;
-    text-align: center;
-    width: 80vw;
-    margin: auto;
-    z-index: 4;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  top: 100vh;
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  z-index: 4;
 }
 
 .myanmar {
-    font-weight: 700;
-    font-size: 4rem;
-    margin: 2rem;
-    background: linear-gradient(to bottom, rgb(161, 161, 0) 25%, green 50%, rgb(184, 0, 0));
-    background: -webkit-linear-gradient(to bottom, rgb(161, 161, 0) 25%, green 50%, rgb(184, 0, 0));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 2rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(161, 161, 0) 25%,
+    green 50%,
+    rgb(184, 0, 0)
+  );
+  background: -webkit-linear-gradient(
+    to bottom,
+    rgb(161, 161, 0) 25%,
+    green 50%,
+    rgb(184, 0, 0)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .mountains {
-    position: relative;
-    width: 100vw;
-    top: 60vh;
-    z-index: 3;
+  position: relative;
+  width: 100vw;
+  top: 60vh;
+  z-index: 3;
 }
 
 .AR {
-    position: relative;
-    top: 80vh;
-    width: 70vw;
-    height: auto;
-    z-index: 3;
-    left: 60vw;
+  position: relative;
+  top: 80vh;
+  width: 70vw;
+  height: auto;
+  z-index: 3;
+  left: 60vw;
 }
 
 .bullet {
-    position: relative;
-    top: 52vh;
-    width: 20vw;
-    z-index: 2;
-    left: 70vw;
+  position: relative;
+  top: 52vh;
+  width: 20vw;
+  z-index: 2;
+  left: 70vw;
 }
