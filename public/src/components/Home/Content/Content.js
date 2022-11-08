@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, Grid, makeStyles } from "@material-ui/core";
 import Portrait from "./portrait.jpg";
 
 const useStyles = makeStyles(() => ({
@@ -30,23 +30,21 @@ const useStyles = makeStyles(() => ({
     lineHeight: 1.7,
     textAlign: "left",
   },
-  bridgeBurma: {
+  indeed: {
     fontWeight: 400,
-    color: "#A25522",
+    color: "#2164f4",
+  },
+  brigeBurma: {
+    fontWeight: 400,
+    color: "#e28743",
   },
 }));
 
 export default function Content() {
-  const { container, bridgeBurma, portrait, title, text } = useStyles();
+  const { indeed, bridgeBurma, portrait, title, text } = useStyles();
 
   return (
-    <Box
-      className={container}
-      height="90vh"
-      marginTop="10vh"
-      display="flex"
-      alignItems="center"
-    >
+    <Box height="90vh" marginTop="10vh" display="flex" alignItems="center">
       <Grid container spacing={2}>
         <Grid
           item
@@ -71,8 +69,8 @@ export default function Content() {
           <Box>
             <h1 className={title}>Hello, I'm Nyan Min Htet!</h1>
             <h2 className={text}>
-              I'm an aspiring software engineer based in San Diego, CA. I'm
-              currently a junior studying Computer Science at
+              I'm an aspiring software engineer based in San Diego, CA. I'm a
+              senior studying Computer Science at
               <span
                 className={text}
                 style={{ fontWeight: 500, color: "#1B69CE" }}
@@ -83,19 +81,29 @@ export default function Content() {
               .
             </h2>
             <h2 className={text}>
-              I specialize in front-end web development which includes working
-              with HTML, CSS, and Javascript , along with frameworks like
-              ReactJS and MaterialUI. I'm also currently working at{" "}
+              I love writing meaningful software and applications that go out to
+              the real world and make an impact on people's lives. I'm
+              previously interned for{" "}
               <a
-                className={bridgeBurma}
-                href="https://www.bridgeburma.com"
+                className={indeed}
+                href="https://www.indeed.com/about?hl=en"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 {" "}
-                Bridge Burma
+                Indeed
               </a>{" "}
-              as a Software Engineer Intern.
+              as a UX Developer and{" "}
+              <a
+                className={bridgeBurma}
+                href="https://www.bridgeburma.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {" "}
+                BridgeBurma
+              </a>{" "}
+              as a Full-Stack Software Engineer.
             </h2>
           </Box>
         </Grid>

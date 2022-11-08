@@ -14,6 +14,10 @@ const data = [
     href: "/my-story",
   },
   {
+    label: "Projects",
+    href: "/projects",
+  },
+  {
     label: "Contact",
     href: "/contact",
   },
