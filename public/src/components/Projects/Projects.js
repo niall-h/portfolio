@@ -34,7 +34,7 @@ const projectList = {
   },
   "2048 AI Game Engine": {
     image: gameAI,
-    shortDescription: "Hi this is the project Description for 2048 AI.",
+    shortDescription: "Hi this  is the project Description for 2048 AI.",
     longDescription:
       "Hi this is the project Description for 2048 AI. Hi this is the project Description for 2048 AI. Hi this is the project Description for 2048 AI.",
     github: "https://github.com/niall-h/portfolio-website",
