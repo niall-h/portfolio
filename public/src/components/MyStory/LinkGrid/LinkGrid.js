@@ -18,12 +18,12 @@ const images = [
     width: "25%",
     href: "/projects",
   },
-  {
-    url: contactImage,
-    title: "Contact Me",
-    width: "25%",
-    href: "/contact",
-  },
+  // {
+  //   url: contactImage,
+  //   title: "Contact Me",
+  //   width: "25%",
+  //   href: "mailto:niallhtet@gmail.com",
+  // },
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
@@ -160,6 +160,47 @@ export default function LinkGrid() {
             </Image>
           </ImageButton>
         ))}
+        {/* ------------------------------------------------------ */}
+        {/* To delete when contact form is finished */}
+        <ImageButton
+          focusRipple
+          key="contact"
+          style={{
+            width: "25%",
+            borderRadius: "20px",
+            boxShadow: "-20px 10px 40px black",
+          }}
+          href="mailto:niallhtet@gmail.com"
+        >
+          <ImageSrc style={{ backgroundImage: `url(${contactImage})` }} />
+          <ImageBackdrop className="MuiImageBackdrop-root" />
+          <Image>
+            <Typography
+              className="MuiText"
+              component="span"
+              variant="subtitle1"
+              color="inherit"
+              sx={{
+                position: "relative",
+                p: 4,
+                pt: 2,
+                pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "25px",
+                  color: "white",
+                  padding: "10px",
+                }}
+              >
+                Contact
+              </div>
+              <ImageMarked className="MuiImageMarked-root" />
+            </Typography>
+          </Image>
+        </ImageButton>
+        {/* ------------------------------------------------------ */}
       </Box>
     </Box>
   );

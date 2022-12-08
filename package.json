@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "public": "npm start --prefix public",
-    "dev": "npm run public",
+    "server": "npm run server --prefix server",
+    "dev": "concurrently \"npm run public\" \"npm run server\"",
     "deploy": "npm run deploy --prefix public"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/niall-h/portfolio-website",
   "dependencies": {
+    "concurrently": "^7.0.0",
     "gh-pages": "^3.2.3"
   }
 }

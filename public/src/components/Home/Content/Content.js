@@ -1,105 +1,107 @@
 import React from "react";
-import { Button, Box, Grid, makeStyles } from "@material-ui/core";
-import Portrait from "./portrait.jpg";
+import {
+  createTheme,
+  responsiveFontSizes,
+  Box,
+  Grid,
+  makeStyles,
+  Typography,
+  Link,
+  ThemeProvider,
+  Container,
+} from "@material-ui/core";
+import Portrait from "./portrait2.jpeg";
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles(() => ({
   portrait: {
     display: "block",
     height: "50vh",
-    width: "50%",
+    width: "80%",
     maxWidth: "500px",
     objectFit: "cover",
-    border: "2px solid black",
-    boxShadow: "-20px 20px 50px black",
     transitionDuration: "0.5s",
     "&:hover": {
-      width: "51%",
+      boxShadow: "-20px 20px #cdcdcd",
       transitionDuration: "0.5s",
     },
-  },
-  title: {
-    fontFamily: "Roboto, sans-serif",
-    fontWeight: 700,
-    fontSize: 50,
-    color: "black",
-  },
-  text: {
-    fontFamily: "Roboto, sans-serif",
-    fontWeight: 300,
-    fontSize: 30,
-    lineHeight: 1.7,
-    textAlign: "left",
-  },
-  bridgeBurma: {
-    fontWeight: 400,
-    color: "#A25522",
   },
 }));
 
 export default function Content() {
-  const { container, bridgeBurma, portrait, title, text } = useStyles();
+  const { portrait, title, text } = useStyles();
 
   return (
-    <Box
-      className={container}
-      height="90vh"
-      marginTop="10vh"
-      display="flex"
-      alignItems="center"
-    >
-      <Grid container spacing={2}>
-        <Grid
-          item
-          container
-          direction="row"
-          display="flex"
-          justify="center"
-          alignItems="center"
-          md={5}
-        >
-          <img src={Portrait} alt="portrait" className={portrait}></img>
+    <Container maxWidth="xl">
+      <Box
+        sx={{ mt: 10, height: { xs: "65rem", md: "90vh" } }}
+        display="flex"
+        alignItems="center"
+      >
+        <Grid container spacing={2}>
+          <Grid item container direction="row" display="flex" md={1}></Grid>
+          <Grid
+            item
+            container
+            direction="row"
+            display="flex"
+            justify="center"
+            md={4}
+          >
+            <Box display="flex" justifyContent="center" mb={{ xs: 4, md: 0 }}>
+              <img src={Portrait} alt="portrait" className={portrait}></img>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            container
+            direction="row"
+            display="flex"
+            justify="center"
+            alignItems="center"
+            md={6}
+          >
+            <Box mx={5}>
+              <ThemeProvider theme={theme}>
+                <Typography variant="h2">Hello, I'm Nyan Min Htet!</Typography>
+                <br></br>
+                <Typography variant="h6">
+                  I'm an aspiring software engineer based in San Diego, CA. I'm
+                  a senior studying Computer Science at University of
+                  California, San Diego.
+                </Typography>
+                <br></br>
+                <Typography variant="h6">
+                  I love writing meaningful software and applications that go
+                  out to the real world and make an impact on people's lives.
+                  I've previously interned for{" "}
+                  <Link
+                    href="https://www.indeed.com/about?hl=en"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {"Indeed"}
+                  </Link>{" "}
+                  as a UX Developer and{" "}
+                  <Link
+                    href="https://www.bridgeburma.com/"
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {"BridgeBurma"}
+                  </Link>{" "}
+                  as a Full-Stack Software Engineer.
+                </Typography>
+              </ThemeProvider>
+            </Box>
+          </Grid>
+          <Grid item container direction="row" display="flex" md={1}></Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction="row"
-          display="flex"
-          justify="center"
-          alignItems="center"
-          md={6}
-        >
-          <Box>
-            <h1 className={title}>Hello, I'm Nyan Min Htet!</h1>
-            <h2 className={text}>
-              I'm an aspiring software engineer based in San Diego, CA. I'm
-              currently a junior studying Computer Science at
-              <span
-                className={text}
-                style={{ fontWeight: 500, color: "#1B69CE" }}
-              >
-                {" "}
-                University of California, San Diego
-              </span>
-              .
-            </h2>
-            <h2 className={text}>
-              I specialize in front-end web development which includes working
-              with HTML, CSS, and Javascript , along with frameworks like
-              ReactJS and MaterialUI. I'm also currently working at{" "}
-              <a
-                className={bridgeBurma}
-                href="https://www.bridgeburma.com"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {" "}
-                Bridge Burma
-              </a>{" "}
-              as a Software Engineer Intern.
-            </h2>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+    </Container>
   );
 }
