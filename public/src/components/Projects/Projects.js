@@ -2,136 +2,112 @@ import React from "react";
 import NavBar from "../Home/NavBar/NavBar";
 import {
   Box,
+  Button,
   Card,
-  CardActionArea,
   CardContent,
+  CardActions,
   CardMedia,
   Typography,
   Grid,
-  Modal,
-  Fade,
+  Container,
+  createTheme,
+  responsiveFontSizes,
+  ThemeProvider,
 } from "@material-ui/core";
 import gameAI from "./2048.jpg";
 import portfolio from "./portfolio.png";
 import sandiegozooseeker from "./sandiegozoo.jpg";
+import surfstore from "./surfstore.jpg";
 
 const projectList = {
   "San Diego ZooSeeker": {
     image: sandiegozooseeker,
     shortDescription:
-      "Hi this is the project Description for san diego zooseeker.",
-    longDescription:
-      "Hi this is the project Description for san diego zooseeker. Hi this is the project Description for san diego zooseeker. Hi this is the project Description for san diego zooseeker.",
+      "A companion app for the San Diego Zoo that lets you select different exhibits and plan a customized itinerary for your trip.",
     github: "https://github.com/niall-h/san-diego-zooseeker",
   },
-  "Portfolio Website": {
+  SurfStore: {
+    image: surfstore,
+    shortDescription:
+      "A cloud-based file storage service like Dropbox that lets multiple clients concurrently connect and sync files to and from the cloud",
+    github: "https://github.com/niall-h/surfstore",
+  },
+  Portfolio: {
     image: portfolio,
     shortDescription:
-      "Hi this is the project Description for portfolio website.",
-    longDescription:
-      "Hi this is the project Description for portfolio website. Hi this is the project Description for portfolio website. Hi this is the project Description for portfolio website.",
+      "This is my web portfolio and you're looking at it right now! This web application is built using React, MaterialUI and some custom CSS.",
     github: "https://github.com/niall-h/portfolio-website",
   },
-  "2048 AI Game Engine": {
+  "2048 AI": {
     image: gameAI,
-    shortDescription: "Hi this  is the project Description for 2048 AI.",
-    longDescription:
-      "Hi this is the project Description for 2048 AI. Hi this is the project Description for 2048 AI. Hi this is the project Description for 2048 AI.",
-    github: "https://github.com/niall-h/portfolio-website",
+    shortDescription:
+      "An AI that plays the famous game, 2048, better than me. But then, I'm also too lazy to think 3 steps ahead when I play.",
+    github: "https://github.com/niall-h/2048ai",
   },
 };
 
-const modalStyles = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "70%",
-  height: "80%",
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  p: 4,
-};
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
-const ProjectCard = ({ name, img, shortDescription, longDescription }) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+const ProjectCard = ({ name, img, shortDescription, github }) => {
   return (
-    <Box>
-      <Card onClick={handleOpen} sx={{ width: 300, height: 300 }}>
-        <CardActionArea>
-          <CardMedia component="img" height="300" image={img} alt="project" />
-          <CardContent>
-            <Typography gutterBottom variant="h4" component="div">
-              {name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {shortDescription}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+    <Box
+      sx={{
+        transitionDuration: "0.5s",
+        "&:hover": {
+          boxShadow: "-20px 20px #cdcdcd",
+          transitionDuration: "0.5s",
+        },
+      }}
+    >
+      <Card>
+        <CardMedia component="img" height="300" image={img} alt="project" />
+        <CardContent>
+          <Typography gutterBottom variant="h4" component="div">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {shortDescription}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button href={github} size="medium" color="primary">
+            More Info
+          </Button>
+        </CardActions>
       </Card>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <Box sx={modalStyles}>
-            <img
-              src={img}
-              style={{
-                height: "40%",
-                width: "100%",
-                objectFit: "cover",
-              }}
-              alt="project"
-            />
-            <Typography variant="h6" component="h2">
-              {name}
-            </Typography>
-            <Typography sx={{ mt: 2 }}>{longDescription}</Typography>
-          </Box>
-        </Fade>
-      </Modal>
     </Box>
   );
 };
 
 export default function Projects() {
   return (
-    <Box sx={{ width: "100vw", height: "90vh" }}>
-      <NavBar />
-      <Box
-        width="80vw"
-        height="90vh"
-        marginTop="10vh"
-        marginLeft="20vh"
-        display="flex"
-        alignItems="center"
-      >
-        <Grid container direction="row" alignItems="stretch" spacing={5}>
-          {Object.keys(projectList).map((projectName) => {
-            return (
-              <Grid key={projectName} item md={4}>
-                <ProjectCard
-                  name={projectName}
-                  img={projectList[projectName].image}
-                  shortDescription={projectList[projectName].shortDescription}
-                  longDescription={projectList[projectName].longDescription}
-                />
-              </Grid>
-            );
-          })}
-        </Grid>
+    <Container maxWidth="xl">
+      <Box display="flex" justifyContent="center">
+        <NavBar />
+        <Box width="80vw" sx={{ mt: { xs: 20, md: 20 }, mb: 5 }}>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h3" align="center">
+              Projects
+            </Typography>
+          </ThemeProvider>
+          <Box height={50}></Box>
+          <Grid container direction="row" alignItems="stretch" spacing={5}>
+            {Object.keys(projectList).map((projectName) => {
+              return (
+                <Grid key={projectName} item md={4}>
+                  <ProjectCard
+                    name={projectName}
+                    img={projectList[projectName].image}
+                    shortDescription={projectList[projectName].shortDescription}
+                    github={projectList[projectName].github}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
       </Box>
-    </Box>
+    </Container>
   );
 }
