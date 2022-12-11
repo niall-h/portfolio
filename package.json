@@ -4,9 +4,8 @@
   "description": "My Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "public": "npm start --prefix public",
+    "dev": "npm start --prefix public",
     "server": "npm run server --prefix server",
-    "dev": "concurrently \"npm run public\" \"npm run server\"",
     "deploy": "npm run deploy --prefix public"
   },
   "repository": {
