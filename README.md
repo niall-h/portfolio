@@ -1,6 +1,6 @@
 <h1>My Web Portfolio</h1>
 
-www.nyanminhtet.com
+www.nyanminhtet.dev
 
 Technology Used:
 <ul>
